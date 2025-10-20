@@ -33,7 +33,7 @@
 ---
 
 ## 3️⃣ 可视化进度
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username={{SH1C}}&theme=radical&hide=prs,issues)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SH1C&theme=radical&hide=prs,issues)
 
 &gt; 绿色格子每天 1 commit 打底，断一天就补双倍。
 
@@ -51,7 +51,7 @@
 
 ## 5️⃣ 每日 checklist 仓库地址
 长期有效的模板 & 112 天详细任务列表：  
-https://github.com/{{SH1C}}/100-days-python-backend/blob/main/docs/roadmap.md
+https://github.com/SH1C/100-days-python-backend/blob/main/docs/roadmap.md
 
 ---
 
