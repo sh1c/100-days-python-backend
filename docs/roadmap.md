@@ -1,15 +1,15 @@
 阶段 0｜前置准备（第 1 周，Day1-7）
 D1  
-- [ ] 装 Python 3.11、VS Code、Git、Postman（1）  
-- [ ] 注册 GitHub，建 100-days-python-backend 私有仓库（0.5）  
-- [ ] 把本打卡模板 README.md 推到仓库（0.5）
+- [X] 装 Python 3.11、VS Code、Git、Postman（1）  
+- [X] 注册 GitHub，建 100-days-python-backend 私有仓库（0.5）  
+- [X] 把本打卡模板 README.md 推到仓库（0.5）
 
 D2  
-- [ ] 命令行 10 个常用指令各敲 5 遍（1）  
+- [X] 命令行 10 个常用指令各敲 5 遍（1）  
 - [ ] 配 oh-my-zsh + 插件（git／z）（1）
 
 D3  
-- [ ] Git 三板斧练习：新建 repo→add→commit→push（1）  
+- [X] Git 三板斧练习：新建 repo→add→commit→push（1）  
 - [ ] 开分支 feature/test → 提 PR → 自己合并（1）
 
 D4  
