@@ -22,13 +22,13 @@
 | 编码 | ✅ | 5 min |  |
 | 单元测试 | ⬜ | 0 min |  |
 | 复盘 & 笔记 | ⬜ | 0 min |  |
-| 提交 & Push | ⬜ | 0 min |  |
+| 提交 & Push | ✅ | 5 min |  |
 
-**今日总结：**  
-&lt;!-- day3跳过docker --&gt;
+**今日总结：**
+&lt;!-- day4完成代码规范化配置 --&gt;
 
-**明日计划：**  
-&lt;!-- day4 D4 完成 --&gt;
+**明日计划：**
+&lt;!-- day5 D6 完成 --&gt;
 
 ---
 
@@ -40,17 +40,17 @@
 ---
 
 ## 4️⃣ 项目清单（链接指向本仓库子目录）
-1. [account-cli](./account-cli) — CLI 记账本 | 阶段 1  
-2. [blog-backend-flask](./blog-backend-flask) — Flask 版博客 | 阶段 2  
-3. [blog-backend-django](./blog-backend-django) — Django 版博客 | 阶段 2  
-4. [community-saas](./community-saas) — 多租户论坛 | 阶段 3  
+1. [account-cli](./account-cli) — CLI 记账本 | 阶段 1
+2. [blog-backend-flask](./blog-backend-flask) — Flask 版博客 | 阶段 2
+3. [blog-backend-django](./blog-backend-django) — Django 版博客 | 阶段 2
+4. [community-saas](./community-saas) — 多租户论坛 | 阶段 3
 
 &gt; 每个子目录 README 再放运行录屏 + 压测报告 + 线上地址。
 
 ---
 
 ## 5️⃣ 每日 checklist 仓库地址
-长期有效的模板 & 112 天详细任务列表：  
+长期有效的模板 & 112 天详细任务列表：
 https://github.com/SH1C/100-days-python-backend/blob/main/docs/roadmap.md
 
 ---

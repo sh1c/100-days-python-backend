@@ -1,0 +1,19 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: end-of-file-fixer      # 末尾空行
+      - id: trailing-whitespace    # 行尾空格
+
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 25.1.0                    # 2025-09 最新稳定版
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1                     # 2025-09 最新
+    hooks:
+      - id: isort
+        args: ["--profile", "black", "--filter-files"]
