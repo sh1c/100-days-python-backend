@@ -22,7 +22,7 @@ D5
 
 D6
 - [x] 通读 PEP8，用 black 格式化一段烂代码（1）
-- [ ] 装 pre-commit，配 black+isort，提交一次（1）
+- [x] 装 pre-commit，配 black+isort，提交一次（1）
 
 D7
 - [ ] 周复盘：写 Week0 日报（要点、踩坑、耗时）→ 推仓库（1）
