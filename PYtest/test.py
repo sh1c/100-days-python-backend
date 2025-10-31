@@ -1,17 +1,26 @@
 import functools
+import random
+import time
 
 
-def xs(func):
+def timer(func):
     @functools.wraps(func)
-    def temp(*a):
-        print("修饰器")
+    def warp(*args):
+        t = time.perf_counter()
+        result = func(*args)
+        spend = time.perf_counter() - t
+        print(f"time:{spend}")
+        return result
 
-    return temp
+    return warp
 
 
-@xs
-def t(n):
-    print(n)
+@timer
+def loop(n):
+    while True:
+        if random.random() > 0.99:
+            break
+    print(n * 10)
 
 
-t(0)
+loop(1)
