@@ -1,26 +1,44 @@
-import functools
-import random
-import time
+import os
+import tempfile
+
+from fileGuard import FileGurad
 
 
-def timer(func):
-    @functools.wraps(func)
-    def warp(*args):
-        t = time.perf_counter()
-        result = func(*args)
-        spend = time.perf_counter() - t
-        print(f"time:{spend}")
-        return result
+def error():
+    with tempfile.TemporaryDirectory() as tp:
+        f = os.path.join(tp, "test.txt")
+        with open(f, "w") as ff:
+            ff.write("旧文件")
+        try:
+            with FileGurad(f):
+                with open(f, "w") as ff:
+                    ff.write("新文件")
+                raise RuntimeError("异常")
 
-    return warp
-
-
-@timer
-def loop(n):
-    while True:
-        if random.random() > 0.99:
-            break
-    print(n * 10)
+        except RuntimeError:
+            pass
+        with open(f) as ff:
+            assert ff.read() == "旧文件"
+    print("完成")
 
 
-loop(1)
+def correct():
+    with tempfile.TemporaryDirectory() as tp:
+        f = os.path.join(tp, "test.txt")
+        with open(f, "w") as ff:
+            ff.write("旧")
+
+        with FileGurad(f):
+            with open(f, "w") as ff:
+                ff.write("新")
+
+        with open(f) as ff:
+            assert ff.read() == "新"
+        assert not os.path.exists(f + ".bak")
+
+    print("ok")
+
+
+if __name__ == "__main__":
+    correct()
+    error()
