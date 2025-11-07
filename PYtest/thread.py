@@ -1,26 +1,35 @@
-import queue
+import multiprocessing
 import threading
 import time
 
-q = queue.Queue(maxsize=5)
+worker = 4
+data = 10**7
 
 
-def pro():
-    for i in range(10):
-        q.put(f"食物{i}")
-        print(f"做了食物{i}")
-        time.sleep(0.2)
+def counter(n):
+    for i in range(n):
+        i = 3.14159 * 2.71828**2
 
 
-def cons():
-    for i in range(10):
-        q.get(f"食物{i}")
-        print(f"吃了食物{i}")
-        time.sleep(0.2)
+def treadings():
+    treads = [threading.Thread(target=counter, args=(data,)) for i in range(worker)]
+    start = time.perf_counter()
+    for i in treads:
+        i.start()
+    for i in treads:
+        i.join()
+
+    return time.perf_counter() - start
 
 
-threading.Thread(target=pro, daemon=True).start()
-threading.Thread(target=cons, daemon=True).start()
+def processings():
+    with multiprocessing.Pool(worker) as p:  # 开四个池子不用with进程不会消失
+        # 把列表里的每一个元素当成一个任务，依次派给进程池里空闲的子进程
+        start = time.perf_counter()
+        p.map(counter, [data] * worker)
+        return time.perf_counter() - start
 
 
-time.sleep(10)
+if __name__ == "__main__":
+    print(f"线程用时:{treadings():0.2f}")
+    print(f"进程用时:{processings():0.2f}")
