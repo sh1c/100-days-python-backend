@@ -2,6 +2,16 @@ import multiprocessing
 import threading
 import time
 
+"""
+
+GIL 保证的是**“解释器里只有一个线程在跑”，
+但不保证**“高级语句的内存操作不可被分割”；
+因此资源仍会被共享，共享就会竞争，竞争就要加锁。或者使用生产者消费者队列
+
+
+"""
+
+
 worker = 4
 data = 10**7
 
