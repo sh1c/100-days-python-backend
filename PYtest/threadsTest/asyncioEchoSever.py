@@ -15,7 +15,7 @@ async def echo(reader: asyncio.StreamReader, writer: asyncio.StreamWriter):
     try:
         while True:
             data = await reader.read(BUFSIZE)
-            if data == None:
+            if not data:
                 break
             writer.write(data)
             await writer.drain()
